@@ -54,7 +54,7 @@ class DiverseBossBar extends BossBar
      */
     public function removePlayer(Player $player): BossBar
     {
-        unset($this->attributeMaps[$player->getId()]);
+        unset($this->attributeMaps[$player->getId()], $this->titles[$player->getId()], $this->subTitles[$player->getId()]);
         return parent::removePlayer($player);
     }
 
